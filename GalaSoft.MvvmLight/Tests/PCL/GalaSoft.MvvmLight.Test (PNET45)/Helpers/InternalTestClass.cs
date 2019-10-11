@@ -41,7 +41,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
             Result = Expected + Internal + _index;
         }
 
-        public void DoStuffPublically()
+        public void DoStuffPublicaly()
         {
             Result = Expected + Public + _index;
         }
@@ -56,7 +56,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
             Result = Expected + InternalStatic;
         }
 
-        public static void DoStuffPublicallyAndStatically()
+        public static void DoStuffPublicalyAndStatically()
         {
             Result = Expected + PublicStatic;
         }
@@ -73,7 +73,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
             return Result;
         }
 
-        public string DoStuffPublicallyWithResult()
+        public string DoStuffPublicalyWithResult()
         {
             Result = Expected + Public + _index;
             return Result;
@@ -91,7 +91,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
             return Result;
         }
 
-        public static string DoStuffPublicallyAndStaticallyWithResult()
+        public static string DoStuffPublicalyAndStaticallyWithResult()
         {
             Result = Expected + PublicStatic;
             return Result;
@@ -106,7 +106,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
                 case WeakActionTestCase.PublicNamedMethod:
                     action = new WeakAction(
                         this,
-                        DoStuffPublically);
+                        DoStuffPublicaly);
                     break;
                 case WeakActionTestCase.InternalNamedMethod:
                     action = new WeakAction(
@@ -121,7 +121,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
                 case WeakActionTestCase.PublicStaticMethod:
                     action = new WeakAction(
                         this,
-                        DoStuffPublicallyAndStatically);
+                        DoStuffPublicalyAndStatically);
                     break;
                 case WeakActionTestCase.InternalStaticMethod:
                     action = new WeakAction(
@@ -157,7 +157,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
                 case WeakActionTestCase.PublicNamedMethod:
                     func = new WeakFunc<string>(
                         this,
-                        DoStuffPublicallyWithResult);
+                        DoStuffPublicalyWithResult);
                     break;
                 case WeakActionTestCase.InternalNamedMethod:
                     func = new WeakFunc<string>(
@@ -172,7 +172,7 @@ namespace GalaSoft.MvvmLight.Test.Helpers
                 case WeakActionTestCase.PublicStaticMethod:
                     func = new WeakFunc<string>(
                         this,
-                        DoStuffPublicallyAndStaticallyWithResult);
+                        DoStuffPublicalyAndStaticallyWithResult);
                     break;
                 case WeakActionTestCase.InternalStaticMethod:
                     func = new WeakFunc<string>(
